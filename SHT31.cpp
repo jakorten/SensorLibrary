@@ -6,6 +6,8 @@
 #include <linux/i2c-dev.h>
 #include <iostream>
 
+using namespace std;
+
 SHT31::SHT31(const char* i2cDevice, int i2cAddress) : _i2cDevice(i2cDevice), _i2cAddress(i2cAddress), _i2cFile(-1) {}
 
 SHT31::~SHT31() {

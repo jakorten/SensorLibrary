@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <cstdint>
 
+using namespace std;
+
 class SHT31 {
 public:
     SHT31(const char* i2cDevice = "/dev/i2c-1", int i2cAddress = 0x44);

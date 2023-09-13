@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <cstdint>
 
+using namespace std;
+
 int main() {
     SHT31 sensor;
     if (!sensor.initialize()) {
