@@ -48,7 +48,7 @@ float SHT31::readHumidity() {
 }
 
 bool SHT31::readTemperatureAndHumidity(float &temperature, float &humidity) {
-    uint8_t command[2];
+    std::uint8_t command[2];
     command[0] = SHT31_MEAS_HIGHREP >> 8;
     command[1] = SHT31_MEAS_HIGHREP & 0xFF;
     
@@ -59,14 +59,14 @@ bool SHT31::readTemperatureAndHumidity(float &temperature, float &humidity) {
 
     usleep(15000);  // Measurement delay
 
-    uint8_t data[6];
+    std::uint8_t data[6];
     if (read(_i2cFile, data, 6) != 6) {
         std::cerr << "Failed to read from the sensor." << std::endl;
         return false;
     }
 
-    uint16_t temp_raw = (data[0] << 8) | data[1];
-    uint16_t humidity_raw = (data[3] << 8) | data[4];
+    std::uint16_t temp_raw = (data[0] << 8) | data[1];
+    std::uint16_t humidity_raw = (data[3] << 8) | data[4];
 
     temperature = 175.0f * temp_raw / 65535.0f - 45.0f;
     humidity = 100.0f * humidity_raw / 65535.0f;

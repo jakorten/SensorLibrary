@@ -19,7 +19,7 @@ private:
     int _i2cAddress;
     int _i2cFile;
 
-    const uint16_t SHT31_MEAS_HIGHREP = 0x2400;
+    const std::uint16_t SHT31_MEAS_HIGHREP = 0x2400;
     bool readTemperatureAndHumidity(float &temperature, float &humidity);
 };
 
