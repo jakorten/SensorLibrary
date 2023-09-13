@@ -1,6 +1,7 @@
-#include "SHT31/SHT31.h"
+#include "SHT31.h"
 #include <iostream>
 #include <unistd.h>
+#include <cstdint>
 
 int main() {
     SHT31 sensor;
