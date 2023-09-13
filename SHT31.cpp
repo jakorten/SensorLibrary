@@ -5,8 +5,7 @@
 #include <sys/ioctl.h>
 #include <linux/i2c-dev.h>
 #include <iostream>
-
-using namespace std;
+#include <cmath>
 
 SHT31::SHT31(const char* i2cDevice, int i2cAddress) : _i2cDevice(i2cDevice), _i2cAddress(i2cAddress), _i2cFile(-1) {}
 
@@ -34,7 +33,7 @@ float SHT31::readTemperature() {
     if (readTemperatureAndHumidity(temperature, humidity)) {
         return temperature;
     } else {
-        return NAN;
+        return std::NAN;
     }
 }
 
@@ -43,7 +42,7 @@ float SHT31::readHumidity() {
     if (readTemperatureAndHumidity(temperature, humidity)) {
         return humidity;
     } else {
-        return NAN;
+        return std::NAN;
     }
 }
 
