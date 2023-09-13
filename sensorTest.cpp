@@ -1,4 +1,4 @@
-#include "SHT31.h"
+#include "SHT/SHT31.h"
 #include <iostream>
 #include <unistd.h>
 #include <stdint.h>
