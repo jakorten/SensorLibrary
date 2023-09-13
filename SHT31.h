@@ -2,6 +2,7 @@
 #define SHT31_H
 
 #include <stdint.h>
+#include <cstdint>
 
 class SHT31 {
 public:

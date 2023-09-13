@@ -2,6 +2,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <stdint.h>
+#include <cstdint>
 
 int main() {
     SHT31 sensor;
