@@ -1,10 +1,10 @@
 #include "SHT31.h"
+#include <stdint.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
 #include <linux/i2c-dev.h>
 #include <iostream>
-#include <stdint.h>
 
 SHT31::SHT31(const char* i2cDevice, int i2cAddress) : _i2cDevice(i2cDevice), _i2cAddress(i2cAddress), _i2cFile(-1) {}
 
